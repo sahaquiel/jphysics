@@ -39,6 +39,15 @@ public class Mass extends PhysicalScalar
 	{
 		System.err.println( "getMassFromVolumeAndDensity(): v = " + v.getValueNormalized() + ", d = " + d.getValueNormalized() );
 		
-		return new Mass( v.getValueNormalized() * d.getValueNormalized() ); 
+		try {
+			
+			return new Mass( v.getValueInUnit( "m3" ) * d.getValueInUnit("g/m3") );
+			
+		} catch (IllegalUnitException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+			return null;
+		} 
 	}
 }
