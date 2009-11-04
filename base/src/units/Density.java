@@ -30,6 +30,11 @@ public class Density extends PhysicalScalar
 		super(value, Density.m_units);
 	}
 	
+	public Density(Density src)
+	{
+		super(src);
+	}
+	
 	public static Density getDensityFromMassAndVolume( Mass m, Volume v )
 	{
 		return new Density( m.getValueNormalized() / v.getValueNormalized() );
