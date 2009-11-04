@@ -1,0 +1,19 @@
+  <?xml version="1.0" encoding="utf-8"?> 
+  <jnlp spec="1.0+" codebase="http://www.frankehlis.de/applications" > 
+    <information> 
+     <title>Episode Renamer</title> 
+     <vendor>Frank Ehlis</vendor> 
+     <description>Episode Renamer Applikation</description>
+     <offline-allowed/> 
+   </information> 
+   <resources> 
+     <j2se version="1.5+"/> 
+     <jar href="EpisodeRenamer.jar"/> 
+   </resources> 
+   <security> 
+<!--
+     <j2ee-application-client-permissions/> 
+     -->
+   </security>    
+   <application-desc main-class="org.fehlis.applications.EpisodeRenamer.EpisodeRenamer"/> 
+  </jnlp> 

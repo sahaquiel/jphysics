@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="H:/cvshome/sources/EpisodeRenamer/EpisodeRenamer.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/EpisodeRenamer/EpisodeRenamer.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="true" saveDescription="true" useSourceFolders="false"/>
+<manifest generateManifest="false" mainClassHandleIdentifier="=EpisodeRenamer/&lt;org.fehlis.applications{EpisodeRenamer.java[EpisodeRenamer" manifestLocation="/EpisodeRenamer/EpisodeRenamer.manifest" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=EpisodeRenamer/&lt;org.fehlis.applications.data"/>
+<javaElement handleIdentifier="=EpisodeRenamer/&lt;org.fehlis.applications.gui"/>
+<javaElement handleIdentifier="=EpisodeRenamer/&lt;org.fehlis.applications"/>
+</selectedElements>
+</jardesc>
