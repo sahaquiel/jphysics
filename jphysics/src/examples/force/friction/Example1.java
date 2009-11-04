@@ -30,6 +30,8 @@ public class Example1
 			Fg.setAngle( 270 );
 			Fg.setUnit( "N" );
 			
+			Velocity v2 = new Velocity( v );
+			
 			Force Fy = new Force( Fg );
 			Fy.setAngle( 90 );
 			

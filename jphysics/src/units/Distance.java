@@ -46,4 +46,10 @@ public class Distance extends PhysicalScalar {
 	{
 		super(value, Distance.m_units, unit);
 	}
+	
+	public Distance( Distance src )
+	{
+		super( src );
+	}
+	
 }

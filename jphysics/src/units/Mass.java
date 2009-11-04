@@ -29,6 +29,11 @@ public class Mass extends PhysicalScalar
 		super(value, Mass.m_units, unit);
 	}
 	
+	public Mass(Mass src)
+	{
+		super(src);
+	}
+
 	/* 
 	 * creates a Mass-object from a PhysicalUnit-object.
 	 * only the value is taken, the unit is the default-unit

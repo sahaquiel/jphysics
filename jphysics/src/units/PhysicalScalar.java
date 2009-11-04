@@ -60,7 +60,6 @@ public abstract class PhysicalScalar
 	{
 		setUnit( unit );
 		setValue( mValue );
-//		m_value = mValue * m_units.elementAt(m_currUnitIndex).multiplicator;
 	}
 
 	public int getCurrUnitIndex() {

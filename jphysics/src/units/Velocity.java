@@ -31,6 +31,11 @@ public class Velocity extends PhysicalScalar
 		super( value, Velocity.m_units );		
 	}
 
+	public Velocity(Velocity src) 
+	{
+		super( src );
+	}
+
 	public static Velocity getVelocityFromDistanceAndTime( Distance d, Time t )
 	{
 		try {

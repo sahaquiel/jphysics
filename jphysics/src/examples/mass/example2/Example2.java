@@ -99,21 +99,24 @@ public class Example2 extends JFrame implements ActionListener
 	{
 		try
 		{
-			m.setValue( Double.parseDouble( tf_m.getText() ) );
+			m.setValue( Double.parseDouble( tf_m.getText() ), (String) cb_m.getSelectedItem() );
 		}
 		catch ( NumberFormatException e ) {}
+		catch ( IllegalUnitException e ) {}		
 
 		try
 		{
-			d.setValue( Double.parseDouble( tf_d.getText() ) );
+			d.setValue( Double.parseDouble( tf_d.getText() ), (String) cb_d.getSelectedItem() );
 		}
 		catch ( NumberFormatException e ) {}
+		catch ( IllegalUnitException e ) {}		
 
 		try
 		{
-			v.setValue( Double.parseDouble( tf_v.getText() ) );
+			v.setValue( Double.parseDouble( tf_v.getText() ), (String) cb_v.getSelectedItem() );
 		}
 		catch ( NumberFormatException e ) {}
+		catch ( IllegalUnitException e ) {}		
 	}
 	
 	private void recalc( PhysicalScalar val )
@@ -123,20 +126,17 @@ public class Example2 extends JFrame implements ActionListener
 			if ( val == m )
 			{
 				m = Mass.getMassFromVolumeAndDensity(v, d);
-				m.setUnit( (String) cb_m.getSelectedItem() );
-				tf_m.setText( m.getValue() + "" );
+				tf_m.setText( m.getValueInUnit( (String) cb_m.getSelectedItem() ) + "" );
 			}
 			else if ( val == d )
 			{
 				d = Density.getDensityFromMassAndVolume(m, v);
-				d.setUnit( (String) cb_d.getSelectedItem() );
-				tf_d.setText( d.getValue() + "" );
+				tf_d.setText( d.getValueInUnit( (String) cb_d.getSelectedItem() ) + "" );
 			}
 			else if ( val == v )
 			{
 				v = Volume.getVolumeFromMassAndDensity(m, d);
-				v.setUnit( (String) cb_v.getSelectedItem() );
-				tf_v.setText( v.getValue() + "" );
+				tf_v.setText( v.getValueInUnit( (String) cb_v.getSelectedItem() ) + "" );
 			}
 		}
 		catch( IllegalUnitException e1 )
@@ -174,18 +174,15 @@ public class Example2 extends JFrame implements ActionListener
 			
 			else if ( e.getSource() == cb_m )
 			{
-				m.setUnit( (String) cb_m.getSelectedItem() );
-				tf_m.setText( m.getValue() + "" );
+				tf_m.setText( m.getValueInUnit( (String) cb_m.getSelectedItem() ) + "" );
 			}
 			else if ( e.getSource() == cb_d )
 			{
-				d.setUnit( (String) cb_d.getSelectedItem() );
-				tf_d.setText( d.getValue() + "" );
+				tf_d.setText( d.getValueInUnit( (String) cb_d.getSelectedItem() ) + "" );
 			}
 			else if ( e.getSource() == cb_v )
 			{
-				v.setUnit( (String) cb_v.getSelectedItem() );
-				tf_v.setText( v.getValue() + "" );
+				tf_v.setText( v.getValueInUnit( (String) cb_v.getSelectedItem() ) + "" );
 			}
 			
 		}
