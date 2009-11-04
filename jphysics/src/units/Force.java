@@ -32,6 +32,12 @@ public class Force extends PhysicalVector
 	{
 		super( value, Force.m_units );		
 	}
+
+	// copy constructor
+	public Force( Force src )
+	{
+		super( src );
+	}
 	
 	public static Force getForceByMassAndAccelleration( Mass m, Accelleration a )
 	{

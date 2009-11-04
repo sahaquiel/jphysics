@@ -130,11 +130,12 @@ public abstract class PhysicalScalar
 		setValue( value );		
 	}	
 	
+	// copy constructor
 	protected PhysicalScalar( PhysicalScalar src )
 	{
 		m_value = src.m_value;
-		
-//		this.c
+		m_units = src.m_units;
+		m_currUnitIndex = src.m_currUnitIndex;
 	}
 
 /*	

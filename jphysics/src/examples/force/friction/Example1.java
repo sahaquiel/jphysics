@@ -30,7 +30,8 @@ public class Example1
 			Fg.setAngle( 270 );
 			Fg.setUnit( "N" );
 			
-			Force Fy = new Force( Fg.getValue(), 90 );
+			Force Fy = new Force( Fg );
+			Fy.setAngle( 90 );
 			
 			System.out.println( "Fg: " + Fg );
 			System.out.println( "Fy: " + Fy );
@@ -40,7 +41,7 @@ public class Example1
 	//		System.out.println( "Fy+Fg: " + FyFg );
 			
 			Force Fx = CentripedalForce.getForceByMassVelocityAndRadius(m, v, r);
-			Fx.setAngle( 180 );		// not really neccessary, since Fx is already x-component of another Force
+			Fx.setAngle( 180 );		// not really necessary, since Fx is already x-component of another Force
 			
 			System.out.println( "Fx: " + Fx );
 			

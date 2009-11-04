@@ -4,8 +4,6 @@ import java.util.Vector;
 
 public abstract class PhysicalVector extends PhysicalScalar
 {
-	protected double m_x;
-	protected double m_y;
 	protected double m_angle;
 	
 	protected PhysicalVector(double scalarValue, Vector<Unit> units)
@@ -27,6 +25,14 @@ public abstract class PhysicalVector extends PhysicalScalar
 		super(scalarValue, units, unit);
 		
 		m_angle = 0;
+	}
+	
+	// copy constructor
+	protected PhysicalVector( PhysicalVector src )
+	{
+		super( src );
+		
+		this.m_angle = src.m_angle;
 	}
 
 	public double getXValue()
